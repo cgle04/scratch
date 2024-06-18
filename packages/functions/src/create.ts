@@ -18,7 +18,7 @@ export const main = handler(async (event) => {
         Item: {
             //the attributes of the item to be created
             // the attrs of the item to be created
-            userId: "123",
+            userId: event.requestContext.authorizer?.iam.cognitoIdentity.identityId,
             noteId: uuid.v1(),
             content: data.content,
             attachment: data.attachment,

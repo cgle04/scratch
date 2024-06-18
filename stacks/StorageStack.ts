@@ -7,7 +7,10 @@ export function StorageStack({ stack }: StackContext) {
             userId: "string",
             noteId: "string",
         }, 
-        primaryIndex: { partitionKey: "userId", sortKey: "noteId" },
+        primaryIndex: { 
+            partitionKey: "userId", 
+            sortKey: "noteId" 
+        },
     });
 
     // Create an S3 Bucket
